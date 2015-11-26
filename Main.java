@@ -32,9 +32,8 @@ public class Main  {
 	class RunTask extends TimerTask {
 	public void run(){
 		
-		Percentage = getPower.getCapacity();
-		//System.out.println(Percentage);
-		//System.out.println(command);
+		Percentage = getPower.getCapacity();// Get current battery percentage
+	
 		if (Integer.parseInt(Percentage) <= threshold){ // If current battery percentage is equal or lower than percentage
 		
 		String[] args = new String[] {"/bin/bash", "-c", command, "with", "args"};// shutdown system in one minute
